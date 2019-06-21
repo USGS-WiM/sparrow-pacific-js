@@ -41,6 +41,12 @@ npm install
 
 bower install
 ```
+
+Install dependencies using bower
+
+```
+bower install
+```
 ## Building and testing
 
 The application uses [Gulp](https://gulpjs.com/) as a build system.  You may need to install Gulp on your development machine.
