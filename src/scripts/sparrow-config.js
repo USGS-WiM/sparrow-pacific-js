@@ -37,15 +37,15 @@ var groupResultsLabels = {
 };
 
 //download locations
-/* var rootURL = "https://test.wim.usgs.gov/SparrowSoutheast/downloads/";
-var phosphorusShapefileURL = rootURL + "southeast_shapefiles_phosphorus.zip";
-var streamflowShapefileURL = rootURL + "southeast_shapefiles_streamflow.zip";
-var sedimentShapefileURL = rootURL + "southeast_shapefiles_sediment.zip";
-var nitrogenShapefileURL = rootURL + "southeast_shapefiles_nitrogen.zip";
-var phosCalibrationURL = rootURL + "southeast_calibration_sites_tp.zip";
-var nitroCalibrationURL = rootURL + "southeast_calibration_sites_tn.zip";
-var streamflowCalibrationURL = rootURL + "southeast_calibration_sites_q.zip";
-var sedimentCalibrationURL = rootURL + "southeast_calibration_sites_ss.zip"; */
+var rootURL = "https://sparrow.wim.usgs.gov/pacific/downloads/";
+var phosphorusShapefileURL = rootURL + "pacific_shapefiles_phosphorus.zip";
+var streamflowShapefileURL = rootURL + "pacific_shapefiles_streamflow.zip";
+var sedimentShapefileURL = rootURL + "pacific_shapefiles_sediment.zip";
+var nitrogenShapefileURL = rootURL + "pacific_shapefiles_nitrogen.zip";
+var phosCalibrationURL = rootURL + "pacific_calibration_sites_tp.zip";
+var nitroCalibrationURL = rootURL + "pacific_calibration_sites_tn.zip";
+var streamflowCalibrationURL = rootURL + "pacific_calibration_sites_q.zip";
+var sedimentCalibrationURL = rootURL + "pacific_calibration_sites_ss.zip";
 
 var tableOutFields = [
     { field: "FID", name: "Unique Feature Id" },
