@@ -37,15 +37,15 @@ var groupResultsLabels = {
 };
 
 //download locations
-/* var rootURL = "https://test.wim.usgs.gov/SparrowSoutheast/downloads/";
-var phosphorusShapefileURL = rootURL + "southeast_shapefiles_phosphorus.zip";
-var streamflowShapefileURL = rootURL + "southeast_shapefiles_streamflow.zip";
-var sedimentShapefileURL = rootURL + "southeast_shapefiles_sediment.zip";
-var nitrogenShapefileURL = rootURL + "southeast_shapefiles_nitrogen.zip";
-var phosCalibrationURL = rootURL + "southeast_calibration_sites_tp.zip";
-var nitroCalibrationURL = rootURL + "southeast_calibration_sites_tn.zip";
-var streamflowCalibrationURL = rootURL + "southeast_calibration_sites_q.zip";
-var sedimentCalibrationURL = rootURL + "southeast_calibration_sites_ss.zip"; */
+var rootURL = "https://sparrow.wim.usgs.gov/pacific/downloads/";
+var phosphorusShapefileURL = rootURL + "pacific_shapefiles_phosphorus.zip";
+var streamflowShapefileURL = rootURL + "pacific_shapefiles_streamflow.zip";
+var sedimentShapefileURL = rootURL + "pacific_shapefiles_sediment.zip";
+var nitrogenShapefileURL = rootURL + "pacific_shapefiles_nitrogen.zip";
+var phosCalibrationURL = rootURL + "pacific_calibration_sites_tp.zip";
+var nitroCalibrationURL = rootURL + "pacific_calibration_sites_tn.zip";
+var streamflowCalibrationURL = rootURL + "pacific_calibration_sites_q.zip";
+var sedimentCalibrationURL = rootURL + "pacific_calibration_sites_ss.zip";
 
 var tableOutFields = [
     { field: "FID", name: "Unique Feature Id" },
@@ -197,7 +197,8 @@ var sedimentSourceDefinitions = {
     s1: "Urban land",
     s2: "Agricultural land",
     s3: "Forest land",
-    s4: "Shrub, scrub, grass, and barren land" 
+    s4: "Shrub, scrub, grass, and barren land",
+    s5: "Intermittent stream channels"
 };
 
 /**get the HEX values below from project Google Doc and make sure:  
@@ -206,17 +207,19 @@ var sedimentSourceDefinitions = {
     3. find coordinating colors (using some sort of gradient generator) and add to the 
       **ToColors arrays. The code will order it from light --> dark, so don't worry about that.
 **/
-var phosColors = ["#BF0000", "#FFCCFF", "#663100", "#FFEC99", "#EAA720", "#0070C0"];
-var phosToColors = ["#FFA479", "#431B45", "#FFC590", "#362E00", "#481A00", "#A6E2FF"];
+var phosColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#663100", "#A2EB85", "#f58833", "#1ABC9C"];
+var phosToColors = ["#4c044c", "#580000", "#6e5900", "#120900", "#174f00", "#743707", "#004d3e"];
 
-var nitroColors = ["#BF0000", "#FFCCFF", "#663100", "#FFEC99", "#A2EB85", "#00a900", "#9B2D72"];
-var nitroToColors = ["#FFA479", "#431B45", "#FFC590", "#362E00", "#003500", "#002F00", "#FFB5F9"];
+var nitroColors = ["#FFCCFF", "#BF0000", "#663100", "#FFEC99", "#08612e", "#1ABC9C", "#b6e4db"];
+var nitroToColors = ["#4c044c", "#580000", "#120900", "#6e5900", "#002811", "#004d3e", "#32514b"];
 
-var streamflowColors = ["#0070C0", "#FFCCFF", "#663100", "#00a900", "#EAA720" ];
-var streamflowToColors = ["#A6E2FF", "#431B45", "#FFC590", "#002F00", "#481A00"];
+var streamflowColors = ["#579689", "#f58833", "#BB8FCE", "#2ECC71", "#BF0000", "#FFEC99"];
+var streamflowToColors = ["#004134", "#743707", "#3e0059", "#002d24", "#580000", "#6e5900"];
 
-var sedimentColors = ["#BF0000", "#FF0D00", "#EF898C", "#C68E1F", "#753E08", "#FFEC99", "#A2EB85", "#00a900", "#006800", "#0070C0", "#9B2D72", "#FD491E"];
-var sedimentToColors = ["#FFA479", "#750000", "#53000E", "#401700", "#FFC98E", "#362E00", "#003500", "#002F00", "#9DF086", "#A6E2FF", "#FFB5F9", "#6C0000"];
+
+var sedimentColors = ["#FFCCFF", "#FFEC99", "#08612e", "#b6e4db", "#f58833"]
+var sedimentToColors = ["#4c044c", "#6e5900", "#002811", "#32514b", "#743707"];
+
 
 function getFields(sourceDefObj, mappedDefObj, definitionCode, group) {
     var fieldsArr = [];
@@ -629,7 +632,7 @@ var Catchments_st_tn = [
     {
         field: "ACCL",
         name: catchmentDefinitions_tn.accl,
-        chartOutfields: getFields(nitrogenSourceDefinitions, catchmentDefinitions_tn, "al", "st_comid")
+        chartOutfields: getFields(nitrogenSourceDefinitions, catchmentDefinitions_tn, "accl", "st_comid")
     },
     {
         field: "INCL",
@@ -1127,7 +1130,7 @@ var Catchments_st_ss = [
     {
         field: "ACCL",
         name: catchmentDefinitions_ss.accl,
-        chartOutfields: getFields(sedimentSourceDefinitions, catchmentDefinitions_ss, "al", "st_comid")
+        chartOutfields: getFields(sedimentSourceDefinitions, catchmentDefinitions_ss, "accl", "st_comid")
     },
     {
         field: "INCL",
