@@ -1094,21 +1094,33 @@ function generateRenderer() {
         //different ramps for phos/nitro
         if ($(".radio input[type='radio']:checked")[0].id == "radio1") {
             //phos brown schema
+            if (colorIndex >= phosColors.length) { // if color arrays aren't updated, adjust the colors to match the chart popup (loops through color array again)
+                colorIndex -= phosColors.length;
+            }
             colorRamp.fromColor = new Color.fromHex((!isNaN(colorIndex) ? phosColors[colorIndex] : "#FFF1DC"));
             colorRamp.toColor = new Color.fromHex((!isNaN(colorIndex) ? phosToColors[colorIndex] : "#632E0E"));
         }
         if ($(".radio input[type='radio']:checked")[0].id == "radio2") {
             //nitro green schema
+            if (colorIndex >= nitroColors.length) {
+                colorIndex -= nitroColors.length;
+            }
             colorRamp.fromColor = new Color.fromHex((!isNaN(colorIndex) ? nitroColors[colorIndex] : "#F5EBB8"));
             colorRamp.toColor = new Color.fromHex((!isNaN(colorIndex) ? nitroToColors[colorIndex] : "#004120"))
         }
         if ($(".radio input[type='radio']:checked")[0].id == "radio3") {
-            //nitro green schema
+            //streamflow schema
+            if (colorIndex >= streamflowColors.length) {
+                colorIndex -= streamflowColors.length;
+            }
             colorRamp.fromColor = new Color.fromHex((!isNaN(colorIndex) ? streamflowColors[colorIndex] : "#ABCEEA"));
             colorRamp.toColor = new Color.fromHex((!isNaN(colorIndex) ? streamflowToColors[colorIndex] : "#00305"));
         }
         if ($(".radio input[type='radio']:checked")[0].id == "radio4"){
             //sediment color ramp
+            if (colorIndex >= sedimentColors.length) {
+                colorIndex -= sedimentColors.length;
+            }
             colorRamp.fromColor = new Color.fromHex((!isNaN(colorIndex) ? sedimentColors[colorIndex] : "#FFE5B4"));
             colorRamp.toColor = new Color.fromHex((!isNaN(colorIndex) ? sedimentToColors[colorIndex] : "#B24903"));
         }
