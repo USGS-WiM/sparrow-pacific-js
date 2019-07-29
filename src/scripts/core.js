@@ -1730,7 +1730,30 @@ require([
                     return "GP1";
                 }
             case 4:
-                return "ST";
+                /*check AOI selections then set the query field to match the displayed layer target field*/
+                if ($("#grp3-select")[0].selectedIndex > 0 && $("#grp2-select")[0].selectedIndex > 0 && $("#grp1-select")[0].selectedIndex > 0) {
+                    return "SG3"
+                }
+                else if ($("#grp3-select")[0].selectedIndex > 0 && $("#grp1-select")[0].selectedIndex > 0) {
+                    return "SG3";
+                }
+                else if ($("#grp3-select")[0].selectedIndex > 0 && $("#grp2-select")[0].selectedIndex > 0) {
+                    return "SG3";
+                }
+                else if ($("#grp2-select")[0].selectedIndex > 0 && $("#grp1-select")[0].selectedIndex > 0) {
+                    return "SG2";
+                }
+                else if ($("#grp3-select")[0].selectedIndex > 0) {
+                    return "SG3";
+                }
+                else if ($("#grp2-select")[0].selectedIndex > 0) {
+                    return "SG2";
+                }
+                else if ($("#grp1-select")[0].selectedIndex > 0) {
+                    return "SG1";
+                } else {
+                    return "ST";
+                }
         }
     }
 

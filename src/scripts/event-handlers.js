@@ -270,15 +270,15 @@ function loadEventHandlers() {
                 } 
                 //DISABLE HUC8 @ full extent because it has too many options
                 if( AOIhasValue() === false ){
-                    $("#grp3-select").attr("disabled", "disabled");
-                    $("#grp3-select").addClass("disabled");
+                    /* $("#grp3-select").attr("disabled", "disabled");
+                    $("#grp3-select").addClass("disabled"); */
                     $("#grp3-select").selectpicker("refresh");
                 } else{
                     $("#grp3-select").selectpicker("refresh");
                 } 
                 //disable tributary (GP2 is not in the GP3 attributes)
-                $("#grp2-select").attr("disabled", "disabled");
-                $("#grp2-select").addClass("disabled");
+                /* $("#grp2-select").attr("disabled", "disabled");
+                $("#grp2-select").addClass("disabled"); */
                 
                 //AOI HUC8(GP3) AND Main River basin(GP1) enabled
                 $("#grp2-select").selectpicker("refresh");
