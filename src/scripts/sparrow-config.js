@@ -216,8 +216,10 @@ var nitroToColors = ["#4c044c", "#580000", "#120900", "#6e5900", "#002811", "#00
 var streamflowColors = ["#579689", "#f58833", "#BB8FCE", "#2ECC71", "#BF0000", "#FFEC99"];
 var streamflowToColors = ["#004134", "#743707", "#3e0059", "#002d24", "#580000", "#6e5900"];
 
+
 var sedimentColors = ["#FFCCFF", "#FFEC99", "#08612e", "#b6e4db", "#f58833"]
 var sedimentToColors = ["#4c044c", "#6e5900", "#002811", "#32514b", "#743707"];
+
 
 function getFields(sourceDefObj, mappedDefObj, definitionCode, group) {
     var fieldsArr = [];

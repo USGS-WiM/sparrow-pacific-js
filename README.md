@@ -34,10 +34,12 @@ Change to the new newly created directory
 cd sparrow-midwest-js
 ```
 
-Install dependencies using NPM
+Install dependencies using NPM and Bower
 
 ```
 npm install
+
+bower install
 ```
 
 Install dependencies using bower
