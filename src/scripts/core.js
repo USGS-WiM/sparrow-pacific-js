@@ -1170,12 +1170,12 @@ require([
                                     "<div><b>Beale or Fluxmaster Estimated TP Load " +
                                     chartUnits +
                                     ": </b>" +
-                                    responseObj.feature.attributes.ACTUAL +
+                                    Math.round(responseObj.feature.attributes.ACTUAL) +
                                     "</div><br>" +
                                     "<div><b>SPARROW Estimated TP Load " +
                                     chartUnits +
                                     ": </b>" +
-                                    responseObj.feature.attributes.PREDICT +
+                                    Math.round(responseObj.feature.attributes.PREDICT) +
                                     "</div><br>"
                             );
 
@@ -1207,12 +1207,12 @@ require([
                                     "<div><b>Beale or Fluxmaster Estimated TN Load " +
                                     chartUnits +
                                     ": </b>" +
-                                    responseObj.feature.attributes.ACTUAL +
+                                    Math.round(responseObj.feature.attributes.ACTUAL) +
                                     "</div><br>" +
                                     "<div><b>SPARROW Estimated TN Load " +
                                     chartUnits +
                                     ": </b>" +
-                                    responseObj.feature.attributes.PREDICT +
+                                    Math.round(responseObj.feature.attributes.PREDICT) +
                                     "</div><br>"
                             );
 
@@ -1241,11 +1241,11 @@ require([
                                 "</div><br>" +
                                 "<div><b>Average Measured Streamflow (cfs): " +
                                 "</b>" +
-                                responseObj.feature.attributes.ACTUAL +
+                                Math.round(responseObj.feature.attributes.ACTUAL) +
                                 "</div><br>" +
                                 "<div><b>SPARROW Estimated Average Streamflow (cfs): " +
                                 "</b>" +
-                                responseObj.feature.attributes.PREDICT +
+                                Math.round(responseObj.feature.attributes.PREDICT) +
                                 "</div><br>"
                             );
 
@@ -1273,11 +1273,11 @@ require([
                                 responseObj.feature.attributes.COMID +
                                 "</div><br>" +
                                 "<div><b>Average Measured Load (MT/yr): </b>" +
-                                responseObj.feature.attributes.ACTUAL +
+                                Math.round(responseObj.feature.attributes.ACTUAL) +
                                 "</div><br>" +
                                 "<div><b>SPARROW Estimated Average Load (MT/yr): " +
                                 "</b>" +
-                                responseObj.feature.attributes.PREDICT +
+                                Math.round(responseObj.feature.attributes.PREDICT) +
                                 "</div><br>" 
                             );
 
