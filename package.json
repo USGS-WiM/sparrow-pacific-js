@@ -2,12 +2,12 @@
   "name": "sparrow-pacific-js",
   "version": "1.0.0",
   "scripts": {
-      "gulp": "gulp",
-      "start": "gulp watch",
-      "build": "gulp build",
-      "patch": "bump patch package.json code.json && gulp build",
-      "minor": "bump minor package.json code.json && gulp build",
-      "major": "bump major package.json code.json && gulp build"
+    "gulp": "gulp",
+    "start": "gulp watch",
+    "build": "gulp build",
+    "patch": "bump patch package.json code.json && gulp build",
+    "minor": "bump minor package.json code.json && gulp build",
+    "major": "bump major package.json code.json && gulp build"
   },
   "description": "WiM generator",
   "repository": {
