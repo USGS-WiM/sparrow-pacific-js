@@ -127,30 +127,12 @@ require([
                 }
             }
         },
-       /*  {
+       {
             groupHeading: "Auxiliary Layers",
             showGroupHeading: true,
             includeInLayerList: true,
             layers: {
-                "Southeast Reaches - zoom in to view": {
-                    url: serviceBaseURL,
-                    visibleLayers: [42],
-                    options: {
-                        id: "streams",
-                        visible: false,
-                        minScale: 3155581.108577
-                    },
-                    wimOptions: {
-                        type: "layer",
-                        layerType: "agisDynamic",
-                        includeInLayerList: true,
-                        hasOpacitySlider: true,
-                        hasZoomto: false,
-                        zoomScale: 3155581.108577,
-                        includeLegend: false
-                    }
-                },
-                "Reaches > 150 cfs": {
+                "Pacific Reaches": {
                     url: serviceBaseURL,
                     visibleLayers: [41],
                     options: {
@@ -199,6 +181,6 @@ require([
                     }
                 }
             }
-        } */
+        }
     ];
 });

@@ -1085,11 +1085,7 @@ function generateRenderer() {
             );
         }
 
-        var colorIndex = NaN;
-        if (app.chosenSource) {
-          // if source selected in sidebar, render based on that source's color in chart
-          colorIndex = app.chosenSource.attribute.split('_S')[1] - 1;
-        }
+
         var colorRamp = new AlgorithmicColorRamp();
         //different ramps for phos/nitro
         if ($(".radio input[type='radio']:checked")[0].id == "radio1") {
@@ -1118,13 +1114,6 @@ function generateRenderer() {
             colorRamp.toColor = new Color.fromHex((app.chosenSource != undefined) ? toSourceColor : "#A04100");
         }
 
-        // make sure the lighter colors are the from colors
-        var toColor = colorRamp.toColor;
-        var fromColor = colorRamp.fromColor;
-        if (!isNaN(colorIndex) && toColor.r > fromColor.r) {
-          colorRamp.toColor = fromColor;
-          colorRamp.fromColor = toColor;
-        }
 
         colorRamp.algorithm = "hsv"; // options are:  "cie-lab", "hsv", "lab-lch"
         classDef.colorRamp = colorRamp;
