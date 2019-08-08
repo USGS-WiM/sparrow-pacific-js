@@ -30,7 +30,7 @@ var initQueryParams = ["ST", "GP3", "GP2", "GP1"]; //used to query for the AOI d
 //used to set dynamic labels in chart
 var groupResultsLabels = {
     a: "Catchment ID",
-    b: "8-Digit hydrologic unit code",
+    b: "HUC8 watershed",
     c: "4-Digit hydrologic unit code",
     d: "2-Digit hydrologic unit code",
     e: "State"
