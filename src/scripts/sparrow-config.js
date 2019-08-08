@@ -207,17 +207,17 @@ var sedimentSourceDefinitions = {
     3. find coordinating colors (using some sort of gradient generator) and add to the 
       **ToColors arrays. The code will order it from light --> dark, so don't worry about that.
 **/
-var phosColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#663100", "#A2EB85", "#f58833", "#1ABC9C"];
+var phosColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#663100", "#A2EB85", "#f58833", "#2ECC71"];
 var phosToColors = ["#4c044c", "#580000", "#6e5900", "#120900", "#174f00", "#743707", "#004d3e"];
 
-var nitroColors = ["#FFCCFF", "#BF0000", "#663100", "#FFEC99", "#08612e", "#1ABC9C", "#b6e4db"];
+var nitroColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#08612e", "#1ABC9C", "#c9daf8", "#2ECC71"];
 var nitroToColors = ["#4c044c", "#580000", "#120900", "#6e5900", "#002811", "#004d3e", "#32514b"];
 
-var streamflowColors = ["#579689", "#f58833", "#BB8FCE", "#2ECC71", "#BF0000", "#FFEC99"];
+var streamflowColors = ["#2980b9", "#BB8FCE", "#ead1dc", "#2ECC71", "#BF0000", "#FFEC99"];
 var streamflowToColors = ["#004134", "#743707", "#3e0059", "#002d24", "#580000", "#6e5900"];
 
 
-var sedimentColors = ["#FFCCFF", "#FFEC99", "#08612e", "#b6e4db", "#f58833"]
+var sedimentColors = ["#FFCCFF", "#d6ad00", "#a2eb85", "#08612e", "#f58833"]
 var sedimentToColors = ["#4c044c", "#6e5900", "#002811", "#32514b", "#743707"];
 
 
