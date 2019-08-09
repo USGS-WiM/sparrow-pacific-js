@@ -112,13 +112,13 @@ var catchmentDefinitions_q = {
     comid: "SPARROW Reach ID ",
     st_comid: "SPARROW Reach ID by State",
     pname: "Catchment Name",
-    accl: "Accumulated streamflow (cfs)",
-    incl: "Incremental streamflow (cfs)",
+    accl: "Accumulated flow (cfs)",
+    incl: "Incremental flow (cfs)",
     accy: "Accumulated yield (mm/yr)",
     incy: "Incremental yield (mm/yr)",
-    daccl: "Delivered accumulated streamflow (cfs)",
+    daccl: "Delivered accumulated flow (cfs)",
     daccy: "Delivered accumulated yield (mm/yr)",
-    dincl: "Delivered incremental streamflow (cfs)",
+    dincl: "Delivered incremental flow (cfs)",
     dincy: "Delivered incremental yield (mm/yr)"
 };
 
@@ -146,9 +146,9 @@ var mappedDefinitions = {
 
 var mappedDefinitions_q = {
     area: "Aggregated area (km2)",
-    al: "Aggregated streamflow (cfs)",
+    al: "Aggregated flow (cfs)",
     ay: "Aggregated yield (mm/yr)",
-    dal: "Delivered aggregated streamflow (cfs)",
+    dal: "Delivered aggregated flow (cfs)",
     day: "Delivered aggregated yield (mm/yr)"
 };
 
@@ -208,10 +208,10 @@ var sedimentSourceDefinitions = {
 **/
 var fromSourceColor = "#FFFFFF";
 var toSourceColor = "#000000";
-var phosColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#663100", "#A2EB85", "#f58833", "#1ABC9C"];
+var phosColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#663100", "#A2EB85", "#f58833", "#2ECC71"];
 var nitroColors = ["#FFCCFF", "#BF0000", "#FFEC99", "#08612e", "#1ABC9C", "#c9daf8", "#2ECC71"];
 var streamflowColors = ["#2980b9", "#BB8FCE", "#ead1dc", "#2ECC71", "#BF0000", "#FFEC99"];
-var sedimentColors = ["#FFCCFF", "#d6ad00", "#a2eb85", "#f58833"]
+var sedimentColors = ["#FFCCFF", "#d6ad00", "#a2eb85", "#f58833"];
 
 function getFields(sourceDefObj, mappedDefObj, definitionCode, group) {
     var fieldsArr = [];
@@ -231,7 +231,7 @@ function getFields(sourceDefObj, mappedDefObj, definitionCode, group) {
     return fieldsArr;
 }
 
-/*** ----- BEGIN PHOSPHORUS LAYER GROUPS--------*** /
+/*** ----- BEGIN PHOSPHORUS LAYER GROUPS--------***/
 /* PHOSPHORUS CATCHMENTS */
 
 /*DOCUMENTATION NOTES: each 'field below should correspond to a "Mapped Attribute" in the cats_tp_attribute_Definitions.xlsx file.  These are the attributes that will be displayed on the map. */
