@@ -163,7 +163,7 @@ var mappedDefinitions_ss = {
 /***UPDATE IMPORTANT! complete with source data Excel key***/
 var phosphorusSourceDefinitions = {
     s1: "Urban land",
-    s2: "Wastewater treatment discharge",
+    s2: "Municipal Wastewater Treatment Discharge",
     s3: "Fertilizer and livestock manure applied to crop land",
     s4: "Grazing cattle manure applied to pasture and range land",
     s5: "Weathering of upland geologic material",
@@ -175,7 +175,7 @@ var phosphorusSourceDefinitions = {
 /***UPDATE IMPORTANT! complete with source data Excel key***/
 var nitrogenSourceDefinitions = {
     s1: "Urban land",
-    s2: "Wastewater treatment discharge",
+    s2: "Municipal Wastewater Treatment Discharge",
     s3: "Fertilizer and livestock manure applied to crop land",
     s4: "Scrub and grass land",
     s5: "Red alder trees",
