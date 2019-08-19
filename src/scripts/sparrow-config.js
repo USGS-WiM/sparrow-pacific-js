@@ -163,7 +163,7 @@ var mappedDefinitions_ss = {
 /***UPDATE IMPORTANT! complete with source data Excel key***/
 var phosphorusSourceDefinitions = {
     s1: "Urban land",
-    s2: "Municipal Wastewater Treatment Discharge",
+    s2: "Wastewater treatment discharge",
     s3: "Fertilizer and livestock manure applied to crop land",
     s4: "Grazing cattle manure applied to pasture and range land",
     s5: "Weathering of upland geologic material",
@@ -175,7 +175,7 @@ var phosphorusSourceDefinitions = {
 /***UPDATE IMPORTANT! complete with source data Excel key***/
 var nitrogenSourceDefinitions = {
     s1: "Urban land",
-    s2: "Municipal Wastewater Treatment Discharge",
+    s2: "Wastewater treatment discharge",
     s3: "Fertilizer and livestock manure applied to crop land",
     s4: "Scrub and grass land",
     s5: "Red alder trees",
@@ -197,7 +197,7 @@ var sedimentSourceDefinitions = {
     s1: "Urban land",
     s2: "Agricultural land",
     s3: "Forest land",
-    s4: "Stream Channels"
+    s4: "Stream channels"
 };
 
 /**get the HEX values below from project Google Doc and make sure:  
