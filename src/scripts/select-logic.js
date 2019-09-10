@@ -1171,12 +1171,17 @@ function generateRenderer() {
             if (!app.hasOwnProperty("legend")) {
                 createLegend();
             } else {
-                app.legend.refresh([
-                    {
-                        layer: app.map.getLayer("SparrowRanking"),
-                        title: getLegendLabels(app.map.getLayer("SparrowRanking").visibleLayers[0])
-                    }
-                ]);
+                var legendInfo = app.legend.layerInfos;
+                //get rid of sparrow ranking while saving other legend elements
+                var updatedLegendInfos = $.grep(legendInfo, function (value) {
+                    return value.layer.id !== "SparrowRanking";
+                });
+                var newSparrowRanking = {
+                    layer: app.map.getLayer("SparrowRanking"),
+                    title: getLegendLabels(app.map.getLayer("SparrowRanking").visibleLayers[0])
+                }
+                updatedLegendInfos.unshift(newSparrowRanking); //put sparrowRanking @ front of array to maintain legend layer order
+                app.legend.refresh(updatedLegendInfos);
             }
             if (layer.visible == false) {
                 layer.show();
