@@ -84,6 +84,7 @@ var catchmentDefinitions = {
     st_comid: "SPARROW Reach by State",
     pname: "Catchment Name",
     accl: "Accumulated load (kg)",
+    concentrat: "Concentration, mg/ L",
     incl: "Incremental load (kg)",
     accy: "Accumulated yield (kg/km2)",
     incy: "Incremental yield (kg/km2)",
@@ -99,6 +100,7 @@ var catchmentDefinitions_tn = {
     st_comid: "SPARROW Reach ID by State",
     pname: "Catchment Name",
     accl: "Accumulated load (kg)",
+    concentrat: "Concentration, mg/L",
     incl: "Incremental load (kg)",
     accy: "Accumulated yield (kg/km2)",
     incy: "Incremental yield (kg/km2)",
@@ -127,6 +129,7 @@ var catchmentDefinitions_ss = {
     st_comid: "SPARROW Reach ID by State",
     pname: "Catchment Name",
     accl: "Accumulated load (MT)",
+    concentrat: "Concentration, mg/L",
     incl: "Incremental load (MT)",
     accy: "Accumulated yield (MT/km2)",
     incy: "Incremental yield (MT/km2)",
@@ -240,6 +243,15 @@ var Catchments = [
         field: "ACCL",
         name: catchmentDefinitions.accl,
         chartOutfields: getFields(phosphorusSourceDefinitions, catchmentDefinitions, "accl", "comid")
+    },
+    {
+        field: "CONCENTR",
+        name: catchmentDefinitions.concentrat,
+        chartOutfields: [
+            { attribute: "COMID", label: catchmentDefinitions.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions.concentrat + " Total" }
+
+        ]
     },
     {
         field: "INCL",
@@ -381,6 +393,15 @@ var Catchments_st = [
         chartOutfields: getFields(phosphorusSourceDefinitions, catchmentDefinitions, "accl", "st_comid")
     },
     {
+        field: "CONCENTR",
+        name: catchmentDefinitions.concentrat,
+        chartOutfields: [
+            { attribute: "ST_COMID", label: catchmentDefinitions.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions.concentrat + " Total" }
+
+        ]
+    },
+    {
         field: "INCL",
         name: catchmentDefinitions.incl,
         chartOutfields: getFields(phosphorusSourceDefinitions, catchmentDefinitions, "incl", "st_comid")
@@ -497,6 +518,15 @@ var Catchments_tn = [
         field: "ACCL",
         name: catchmentDefinitions_tn.accl,
         chartOutfields: getFields(nitrogenSourceDefinitions, catchmentDefinitions_tn, "accl", "comid")
+    },
+    {
+        field: "CONCENTR",
+        name: catchmentDefinitions_tn.concentrat,
+        chartOutfields: [
+            { attribute: "COMID", label: catchmentDefinitions_tn.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions_tn.concentrat + " Total" }
+
+        ]
     },
     {
         field: "INCL",
@@ -636,6 +666,15 @@ var Catchments_st_tn = [
         field: "ACCL",
         name: catchmentDefinitions_tn.accl,
         chartOutfields: getFields(nitrogenSourceDefinitions, catchmentDefinitions_tn, "accl", "st_comid")
+    },
+    {
+        field: "CONCENTR",
+        name: catchmentDefinitions_tn.concentrat,
+        chartOutfields: [
+            { attribute: "ST_COMID", label: catchmentDefinitions_tn.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions_tn.concentrat + " Total" }
+
+        ]
     },
     {
         field: "INCL",
@@ -1011,6 +1050,15 @@ var Catchments_ss = [
         chartOutfields: getFields(sedimentSourceDefinitions, catchmentDefinitions_ss, "accl", "comid")
     },
     {
+        field: "CONCENTR",
+        name: catchmentDefinitions_ss.concentrat,
+        chartOutfields: [
+            { attribute: "COMID", label: catchmentDefinitions_ss.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions_ss.concentrat + " Total" }
+
+        ]
+    },
+    {
         field: "INCL",
         name: catchmentDefinitions_ss.incl,
         chartOutfields: getFields(sedimentSourceDefinitions, catchmentDefinitions_ss, "incl", "comid")
@@ -1148,6 +1196,15 @@ var Catchments_st_ss = [
         field: "ACCL",
         name: catchmentDefinitions_ss.accl,
         chartOutfields: getFields(sedimentSourceDefinitions, catchmentDefinitions_ss, "accl", "st_comid")
+    },
+    {
+        field: "CONCENTR",
+        name: catchmentDefinitions_ss.concentrat,
+        chartOutfields: [
+            { attribute: "COMID", label: catchmentDefinitions_ss.comid },
+            { attribute: "CONCENTR", label: catchmentDefinitions_ss.concentrat + " Total" }
+
+        ]
     },
     {
         field: "INCL",
