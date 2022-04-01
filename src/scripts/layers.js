@@ -132,6 +132,23 @@ require([
             showGroupHeading: true,
             includeInLayerList: true,
             layers: {
+                "Nutrient-Impaired Water Bodies": {
+                    url: serviceBaseURL,
+                    visibleLayers: [42],
+                    options: {
+                        id: "impairedWaterbodies",
+                        visible: false,
+                        opacity: 0.85
+                    },
+                    wimOptions: {
+                        type: "layer",
+                        layerType: "agisDynamic",
+                        includeInLayerList: true,
+                        hasOpacitySlider: true,
+                        hasZoomto: false,
+                        includeLegend: false
+                    }
+                },
                 "Pacific Reaches": {
                     url: serviceBaseURL,
                     visibleLayers: [41],
