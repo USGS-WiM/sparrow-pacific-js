@@ -1757,14 +1757,13 @@ require([
 
                             //Nutrient-Impaired Water Body Site InfoWindow
                             if (responseObj.layerId === 42) {
-                                var model_ss = "Nutrient-Impaired Water Body";
+                                var model_ss = "Nutrient-Impaired Water Body (2012 303d listing)";
                                 var auxiliaryTemplate = new esri.InfoTemplate();
                                 auxiliaryTemplate.setTitle(
                                     model_ss
                                 );
                                 //UPDATE important! make sure the field names below match what is in the REST layer
                                 auxiliaryTemplate.setContent(
-                                    "<div>(2012 303d listing)</div><br>" +
                                     "<div><b>Unique identifier for impaired water body: </b> " +
                                         responseObj.feature.attributes
                                             .WBID +
@@ -1792,6 +1791,7 @@ require([
                                     responseObj.feature,
                                 ]);
                                 app.map.infoWindow.show(evt.mapPoint);
+                                app.map.infoWindow.resize(325,300);
                                 calibrationInfoWindow = true;
                             }
                         });
