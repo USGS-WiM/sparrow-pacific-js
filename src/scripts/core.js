@@ -1485,6 +1485,14 @@ require([
                     .visibleLayers[0];
                 app.identifyParams.layerIds.push(calibrationId);
             }
+            if (
+                visLayers[i].id === "impairedWaterbodies" &&
+                app.map.getLayer("impairedWaterbodies").visible === true
+            ) {
+                calibrationId = app.map.getLayer("impairedWaterbodies")
+                    .visibleLayers[0];
+                app.identifyParams.layerIds.push(calibrationId);
+            }
         }
 
         app.identifyParams.geometry = evt.mapPoint;
@@ -1744,6 +1752,46 @@ require([
                                     responseObj.feature,
                                 ]);
                                 app.map.infoWindow.show(evt.mapPoint);
+                                calibrationInfoWindow = true;
+                            }
+
+                            //Nutrient-Impaired Water Body Site InfoWindow
+                            if (responseObj.layerId === 42) {
+                                var model_ss = "Nutrient-Impaired Water Body (2012 303d listing)";
+                                var auxiliaryTemplate = new esri.InfoTemplate();
+                                auxiliaryTemplate.setTitle(
+                                    model_ss
+                                );
+                                //UPDATE important! make sure the field names below match what is in the REST layer
+                                auxiliaryTemplate.setContent(
+                                    "<div><b>Unique identifier for impaired water body: </b> " +
+                                        responseObj.feature.attributes
+                                            .WBID +
+                                        "</div><br>" +
+                                        "<div><b>SPARROW Reach ID: </b> </b>" +
+                                        responseObj.feature.attributes
+                                            .Reach_ID +
+                                        "</div><br>" +
+                                        "<div><b>Name of impaired water body: </b>" +
+                                        responseObj.feature.attributes
+                                            .WB_name +
+                                        "</div><br>" +
+                                        "<div><b>State with regulatory authority over the impaired water body: </b>" +
+                                        responseObj.feature.attributes
+                                            .State +
+                                        "</div><br>" 
+                                );
+
+                                var graphic = new Graphic();
+                                var feature = graphic;
+                                responseObj.feature.setInfoTemplate(
+                                    auxiliaryTemplate
+                                );
+                                app.map.infoWindow.setFeatures([
+                                    responseObj.feature,
+                                ]);
+                                app.map.infoWindow.show(evt.mapPoint);
+                                app.map.infoWindow.resize(325,300);
                                 calibrationInfoWindow = true;
                             }
                         });
