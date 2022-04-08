@@ -9,7 +9,7 @@ ALSO uses SPARROWID and ST_SPARRID in place of COMID, ST_COMID
 var appTitle = "2012 SPARROW Models for the Pacific: Total Phosphorus, Total Nitrogen, Suspended Sediment, and Streamflow";
 var appVersion = "v0.9.0"; // could pull this from code/package.json
 
-var serviceBaseURL = "https://sparrowtest.wim.usgs.gov/arcgis/rest/services/SparrowPacific/SparrowPacific/MapServer/"; //important! UPDATE rest service URL
+var serviceBaseURL = "https://gis1.wim.usgs.gov/server/rest/services/Sparrow/SparrowPacific/MapServer/"; //important! UPDATE rest service URL
 var chartUnits = " (kg/yr.)";
 var chartFeatureMax = 2500; //chart will not be available if more than this many polygons are showing on map.
 
